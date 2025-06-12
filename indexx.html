@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Diezmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="logo">💸 App Diezmos</div>
+        <div class="acciones">
+            <button onclick="toggleTabla()" class="btn-secundario">
+                <i class="fas fa-history"></i> Historial
+            </button>
+            <form method="post" action="index.html" style="display:inline;">
+                <button type="submit" class="btn-secundario">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <!-- Calculadora -->
+        <section class="card">
+            <h1>Calculadora de Diezmos</h1>
+            <form id="formulario">
+                <div class="form-group">
+                    <label for="monto">Monto Total:</label>
+                    <input type="number" id="monto" placeholder="Ingresa el monto" required>
+                </div>
+                <div class="form-group">
+                    <label for="conversion">Monto Conversión:</label>
+                    <input type="float" id="conversion" placeholder="Ingresa valor conversión">
+                </div>
+                <button type="submit" class="btn-principal">
+                    <i class="fas fa-calculator"></i> Calcular
+                </button>
+            </form>
+        </section>
+
+        <!-- Historial -->
+        <section class="card" id="historial" style="display: none;">
+            <h2>Historial de Diezmos</h2>
+            <div class="table-container">
+                <table id="tablaResultados">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Monto</th>
+                            <th>Deducción 21%</th>
+                            <th>Resto 21%</th>
+                            <th>Deducción 4%</th>
+                            <th>Resto Final</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Registros generados dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    
+    <script>
+        function toggleTabla() {
+            const tabla = document.getElementById('historial');
+            tabla.style.display = tabla.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
