@@ -1,0 +1,19 @@
+# Tabla de Descuentos y Historial de Transacciones
+
+Este proyecto muestra una tabla donde se calculan descuentos y se guarda un historial de transacciones, usando HTML, CSS y JavaScript.
+
+## 📌 Funcionalidad
+- Ingresas un precio y porcentaje de descuento.
+- Al presionar "Calcular", aparece el precio final.
+- El sistema guarda el historial de transacciones realizadas.
+
+## 💻 Tecnologías utilizadas
+- HTML
+- CSS
+- JavaScript
+
+## 🌐 Uso del sistema
+Ideal para vendedores, negocios o desarrolladores que necesiten calcular descuentos y ver un historial organizado.
+
+## 📷 Vista previa
+![Captura de pantalla](img/screenshot.png) 
